@@ -18,7 +18,7 @@ export default class Game extends React.Component<{}, GameState> {
         this.state = {
             history: [
                 {
-                    squares: Array<SquareType>(9).fill(null)
+                    squares: Array(9).fill(null)
                 }
             ],
             stepNumber: 0,
@@ -98,7 +98,7 @@ export default class Game extends React.Component<{}, GameState> {
     }
 }
 
-function calculateWinner(squares: Array<SquareType>): SquareType {
+function calculateWinner(squares: SquareType[]): SquareType {
     const lines = [
         [0, 1, 2],
         [3, 4, 5],
